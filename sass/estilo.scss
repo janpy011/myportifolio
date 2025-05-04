@@ -454,6 +454,7 @@ footer {
     }
 
     .tecnologias {
+        margin: 0 auto;
         .skills {
             justify-content: center;
             flex-wrap: wrap;
@@ -498,6 +499,10 @@ footer {
 
     .hamburger {
         display: flex;
+    }
+
+    .menu_inicio{
+        width: 100%;
     }
 
     .menu_nav {
