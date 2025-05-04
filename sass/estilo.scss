@@ -366,6 +366,13 @@ body {
     height: fit-content;
     justify-content: center;
 
+    .box__contato{
+        display: flex;
+        gap: 1em;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
     img {
         width: 50px;
 
@@ -380,6 +387,8 @@ body {
         display: flex;
         gap: 10px;
         align-items: center;
+        width: fit-content;
+        margin: 0 auto;
     }
 
     .fale_comigo {
@@ -439,6 +448,11 @@ footer {
 
     .habilidades {
         padding: 1em;
+    }
+
+    .contatos_{
+        flex-direction: column;
+        justify-content: center;
     }
 }
 

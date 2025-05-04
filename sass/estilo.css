@@ -334,6 +334,13 @@ body {
   height: fit-content;
   justify-content: center;
 }
+.contatos_ .box__contato {
+  display: flex;
+  gap: 1em;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
 .contatos_ img {
   width: 50px;
 }
@@ -346,6 +353,9 @@ body {
   display: flex;
   gap: 10px;
   align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 .contatos_ .fale_comigo {
   display: flex;
@@ -393,6 +403,10 @@ footer {
   }
   .habilidades {
     padding: 1em;
+  }
+  .contatos_ {
+    flex-direction: column;
+    justify-content: center;
   }
 }
 .hamburger {
