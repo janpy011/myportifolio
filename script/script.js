@@ -8,40 +8,38 @@ hamburger.addEventListener('click', () => {
 });
 
 // ANIMAÇÃO DO TÍTULO (DIGITAÇÃO)
-const elemento = document.getElementById("texto-visivel");
-const textos = ["Janpierry Santana", "Frontend Developer"];
+const elemento = document.getElementById("titulo_inicio");
+const textos = ["Janpierry Santana", "Dev Frontend"];
 let indexTexto = 0;
 let indexLetra = 0;
 let apagando = false;
 
 function digitar() {
     const textoAtual = textos[indexTexto];
-    const visivel = textoAtual.slice(0, indexLetra);
-    elemento.textContent = visivel;
 
-    if (!apagando) {
-        if (indexLetra < textoAtual.length) {
-            indexLetra++;
-        } else {
-            apagando = true;
-            setTimeout(digitar, 1000);
-            return;
-        }
+    if (!apagando && indexLetra <= textoAtual.length) {
+        elemento.textContent = textoAtual.substring(0, indexLetra);
+        indexLetra++;
+        setTimeout(digitar, 100);
+    } else if (apagando && indexLetra >= 0) {
+        elemento.textContent = textoAtual.substring(0, indexLetra);
+        indexLetra--;
+        setTimeout(digitar, 60);
     } else {
-        if (indexLetra > 0) {
-            indexLetra--;
+        if (!apagando) {
+            apagando = true;
+            setTimeout(digitar, 1200); 
         } else {
             apagando = false;
             indexTexto = (indexTexto + 1) % textos.length;
+            setTimeout(digitar, 300); 
         }
     }
-
-    setTimeout(digitar, apagando ? 60 : 100);
 }
 
 digitar();
 
-// ANIMAÇÃO DAS HABILIDADES AO SCROLL (usando data-porcentagem)
+// ANIMAÇÃO DAS HABILIDADES AO SCROLL
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
