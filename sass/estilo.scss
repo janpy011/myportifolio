@@ -101,11 +101,22 @@ body {
         #titulo_inicio {
             font-size: 40px;
             font-weight: 700;
-            display: inline-block;
-            min-width: 300px;
+            font-family: monospace;
+            width: 20ch;
+            height: 48px;
+            line-height: 48px;
+            display: block;
             white-space: nowrap;
             overflow: hidden;
             position: relative;
+        }
+
+        .texto-oculto {
+            visibility: hidden;
+            position: absolute;
+            white-space: nowrap;
+            pointer-events: none;
+            user-select: none;
         }
 
         .paragrafo_inicio {
@@ -168,14 +179,12 @@ body {
         width: 100%;
         display: flex;
         justify-content: center;
-        z-index: 888;
 
         img {
             border-radius: 50%;
             width: 100%;
             max-width: 300px;
             box-shadow: 0px 0px 10px $branco;
-            z-index: 888;
         }
     }
 }
@@ -220,9 +229,15 @@ body {
 
     .educacao_2 {
         display: flex;
+        flex-direction: column;
         gap: 2em;
-        width: fit-content;
+        width: 100%;
         background-color: $preto;
+        margin: 0;
+
+        article {
+            width: 100%;
+        }
     }
 
     ul {
@@ -289,12 +304,29 @@ body {
             }
 
             // Cores individuais (opcional)
-            .html { background-color: #f16529; }
-            .css { background-color: #2965f1; }
-            .javascript { background-color: #f0db4f; }
-            .sass { background-color: #cf649a; }
-            .bootstrap { background-color: #563d7c; }
-            .figma { background-color: #a259ff; }
+            .html {
+                background-color: #f16529;
+            }
+
+            .css {
+                background-color: #2965f1;
+            }
+
+            .javascript {
+                background-color: #f0db4f;
+            }
+
+            .sass {
+                background-color: #cf649a;
+            }
+
+            .bootstrap {
+                background-color: #563d7c;
+            }
+
+            .figma {
+                background-color: #a259ff;
+            }
         }
     }
 }
@@ -351,7 +383,7 @@ body {
     height: fit-content;
     justify-content: center;
 
-    .box__contato{
+    .box__contato {
         display: flex;
         gap: 1em;
         width: fit-content;
@@ -362,6 +394,7 @@ body {
         width: 50px;
         background-color: $branco;
         padding: 5px;
+
         &:hover {
             filter: drop-shadow(0px 0px 6px $branco);
             transition: .4s ease-in-out;
@@ -416,7 +449,7 @@ footer {
         .imagem_inicio {
             max-width: 200px;
             width: 65%;
-            margin-right: 50px;
+            margin-top: 50px;
         }
     }
 
@@ -437,7 +470,7 @@ footer {
         padding: 1em;
     }
 
-    .contatos_{
+    .contatos_ {
         flex-direction: column;
         justify-content: center;
     }
@@ -483,7 +516,6 @@ footer {
         ul {
             gap: 1em;
             list-style: none;
-            flex-direction: column;
 
             li a {
                 padding: 10px;

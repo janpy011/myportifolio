@@ -88,11 +88,23 @@ body {
 .container_inicio .conteudo_inicio #titulo_inicio {
   font-size: 40px;
   font-weight: 700;
-  display: inline-block;
-  min-width: 300px;
+  font-family: monospace;
+  width: 20ch;
+  height: 48px;
+  line-height: 48px;
+  display: block;
   white-space: nowrap;
   overflow: hidden;
   position: relative;
+}
+.container_inicio .conteudo_inicio .texto-oculto {
+  visibility: hidden;
+  position: absolute;
+  white-space: nowrap;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .container_inicio .conteudo_inicio .paragrafo_inicio {
   font-size: 13px;
@@ -146,14 +158,12 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  z-index: 888;
 }
 .container_inicio .imagem_inicio img {
   border-radius: 50%;
   width: 100%;
   max-width: 300px;
   box-shadow: 0px 0px 10px #fff;
-  z-index: 888;
 }
 
 .sobre_mim {
@@ -191,10 +201,14 @@ body {
 }
 .sobre_mim .educacao_2 {
   display: flex;
+  flex-direction: column;
   gap: 2em;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
   background-color: #000;
+  margin: 0;
+}
+.sobre_mim .educacao_2 article {
+  width: 100%;
 }
 .sobre_mim ul {
   list-style: none;
@@ -377,7 +391,7 @@ footer {
   .container_inicio .imagem_inicio {
     max-width: 200px;
     width: 65%;
-    margin-right: 50px;
+    margin-top: 50px;
   }
   .tecnologias .skills {
     justify-content: center;
@@ -433,7 +447,6 @@ footer {
   .menu_nav ul {
     gap: 1em;
     list-style: none;
-    flex-direction: column;
   }
   .menu_nav ul li a {
     padding: 10px;
