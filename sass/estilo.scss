@@ -3,6 +3,7 @@
 $branco: #fff;
 $preto: #000;
 $pretoClaro: #0f0f0f;
+$rgbaClaro: rgb(255, 255, 255, .4);
 
 html {
     scroll-behavior: smooth;
@@ -17,7 +18,7 @@ html {
 
 body {
     background-color: $preto;
-    padding: 2em;
+    padding: 1.5em;
     overflow-x: hidden;
 }
 
@@ -79,24 +80,6 @@ body {
     }
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 25px;
-    height: 18px;
-    cursor: pointer;
-    z-index: 1001;
-    margin-right: 10px;
-
-    span {
-        height: 3px;
-        width: 100%;
-        background-color: $branco;
-        border-radius: 2px;
-        transition: 0.4s ease;
-    }
-}
 
 .container_inicio {
     display: flex;
@@ -156,7 +139,7 @@ body {
             margin-top: 30px;
 
             .social {
-                background-color: $pretoClaro;
+                background-color: $branco;
                 border-radius: 10px;
                 padding: 5px;
                 display: flex;
@@ -166,7 +149,7 @@ body {
 
                 &:hover {
                     transform: scale(1.1);
-                    background-color: $branco;
+                    background-color: $rgbaClaro;
                     transition: 0.4s ease-in-out;
                 }
 
@@ -185,12 +168,14 @@ body {
         width: 100%;
         display: flex;
         justify-content: center;
+        z-index: 888;
 
         img {
             border-radius: 50%;
             width: 100%;
             max-width: 300px;
             box-shadow: 0px 0px 10px $branco;
+            z-index: 888;
         }
     }
 }
@@ -375,7 +360,8 @@ body {
 
     img {
         width: 50px;
-
+        background-color: $branco;
+        padding: 5px;
         &:hover {
             filter: drop-shadow(0px 0px 6px $branco);
             transition: .4s ease-in-out;
@@ -429,7 +415,8 @@ footer {
 
         .imagem_inicio {
             max-width: 200px;
-            width: 70%;
+            width: 65%;
+            margin-right: 50px;
         }
     }
 
@@ -483,20 +470,20 @@ footer {
     .menu_nav {
         display: none;
         position: absolute;
-        top: 110px;
-        right: 20px;
+        top: 70px;
+        right: 10px;
         background-color: $pretoClaro;
         flex-direction: column;
         gap: 1em;
-        padding: 1em;
+        padding: 5px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
         z-index: 1000;
 
         ul {
-            flex-direction: column;
             gap: 1em;
             list-style: none;
+            flex-direction: column;
 
             li a {
                 padding: 10px;
