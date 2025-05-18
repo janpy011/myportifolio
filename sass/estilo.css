@@ -103,7 +103,7 @@ main {
 }
 .container_inicio .conteudo_inicio .paragrafo_inicio {
   font-size: 13px;
-  text-align: center;
+  text-align: justify;
 }
 .container_inicio .conteudo_inicio .botao_inicio {
   margin-top: 1em;
