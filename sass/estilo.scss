@@ -4,6 +4,8 @@ $branco: #fff;
 $preto: #000;
 $pretoClaro: #0f0f0f;
 $rgbaClaro: rgb(255, 255, 255, .4);
+$vermelho: #ff0000;
+
 
 html {
     scroll-behavior: smooth;
@@ -76,7 +78,7 @@ body {
     }
 }
 
-main{
+main {
     padding: 2.5em;
 }
 
@@ -293,7 +295,7 @@ main{
                 transition: width 3s ease-in-out;
             }
 
-            
+
             .html {
                 background-color: #f16529;
             }
@@ -352,7 +354,7 @@ main{
                 }
             }
 
-            .games{
+            .games {
                 width: 150px;
                 padding: 15px;
                 border-radius: 0;
@@ -370,45 +372,116 @@ main{
 
 .contatos_ {
     display: flex;
-    gap: 3em;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
     background-color: $pretoClaro;
     color: $branco;
     font-weight: 700;
     margin-top: 60px;
-    padding: 10px;
+    padding: 2em 1em;
     width: 100%;
-    height: fit-content;
-    justify-content: center;
 
     .box__contato {
         display: flex;
+        flex-wrap: wrap;
         gap: 1em;
-        width: fit-content;
-        margin: 0 auto;
-    }
+        justify-content: center;
 
-    img {
-        width: 50px;
-        background-color: $branco;
-        padding: 5px;
+        .fale_comigo {
+            display: flex;
 
-        &:hover {
-            filter: drop-shadow(0px 0px 6px $branco);
-            transition: .4s ease-in-out;
-            transform: translateY(-4px);
+            img {
+                width: 50px;
+                background-color: $branco;
+                padding: 5px;
+                border-radius: 10px;
+                transition: 0.4s ease-in-out;
+
+                &:hover {
+                    filter: drop-shadow(0px 0px 6px $branco);
+                    transform: translateY(-4px);
+                }
+            }
         }
     }
 
-    .gmail {
+    .formulario_contato {
         display: flex;
-        gap: 10px;
-        align-items: center;
-        width: fit-content;
-        margin: 0 auto;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        max-width: 400px;
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 2rem;
+        border-radius: 10px;
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: $branco;
+            text-align: center;
+        }
+
+        input,
+        textarea {
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            resize: none;
+            background-color: $branco;
+            color: $pretoClaro;
+            font-weight: 500;
+        }
+
+        textarea {
+            min-height: 120px;
+        }
+
+        button {
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            background-color: $pretoClaro;
+            color: $branco;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+                background-color: darken($branco, 10%);
+                color: $preto;
+            }
+        }
+    }
+}
+
+.mensagem-sucesso {
+    display: none;
+    color: $branco;
+    background-color: #198754;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+    margin-top: 1em;
+}
+
+.mensagem-sucesso.ativa {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
     }
 
-    .fale_comigo {
-        display: flex;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -452,6 +525,7 @@ footer {
 
     .tecnologias {
         margin: 0 auto;
+
         .skills {
             justify-content: center;
             flex-wrap: wrap;
@@ -498,7 +572,7 @@ footer {
         display: flex;
     }
 
-    .menu_inicio{
+    .menu_inicio {
         width: 100%;
     }
 

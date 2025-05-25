@@ -318,46 +318,107 @@ main {
 
 .contatos_ {
   display: flex;
-  gap: 3em;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
   background-color: #0f0f0f;
   color: #fff;
   font-weight: 700;
   margin-top: 60px;
-  padding: 10px;
+  padding: 2em 1em;
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  justify-content: center;
 }
 .contatos_ .box__contato {
   display: flex;
+  flex-wrap: wrap;
   gap: 1em;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
+  justify-content: center;
 }
-.contatos_ img {
+.contatos_ .box__contato .fale_comigo {
+  display: flex;
+}
+.contatos_ .box__contato .fale_comigo img {
   width: 50px;
   background-color: #fff;
   padding: 5px;
-}
-.contatos_ img:hover {
-  filter: drop-shadow(0px 0px 6px #fff);
+  border-radius: 10px;
   transition: 0.4s ease-in-out;
+}
+.contatos_ .box__contato .fale_comigo img:hover {
+  filter: drop-shadow(0px 0px 6px #fff);
   transform: translateY(-4px);
 }
-.contatos_ .gmail {
+.contatos_ .formulario_contato {
   display: flex;
-  gap: 10px;
-  align-items: center;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 10px;
 }
-.contatos_ .fale_comigo {
-  display: flex;
+.contatos_ .formulario_contato h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: center;
+}
+.contatos_ .formulario_contato input,
+.contatos_ .formulario_contato textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: none;
+  background-color: #fff;
+  color: #0f0f0f;
+  font-weight: 500;
+}
+.contatos_ .formulario_contato textarea {
+  min-height: 120px;
+}
+.contatos_ .formulario_contato button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #0f0f0f;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contatos_ .formulario_contato button:hover {
+  background-color: #e6e6e6;
+  color: #000;
 }
 
+.mensagem-sucesso {
+  display: none;
+  color: #fff;
+  background-color: #198754;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out;
+  margin-top: 1em;
+}
+
+.mensagem-sucesso.ativa {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 footer {
   text-align: center;
   color: #fff;
