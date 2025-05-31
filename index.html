@@ -16,7 +16,7 @@
             <div class="curriculo">
                 <a href="Curriculo_Janpierry_Santana_Com_Portfolio (1).pdf" class="botao-download" data-animar="b"
                     style="transition-delay: 0.8s;" download>
-                    📄 Baixar Currículo
+                    <img src="img/simbolo-de-download.png" width="30px" alt="baixar cv"> Baixar CV
                 </a>
             </div>
 
@@ -36,33 +36,19 @@
         </div>
     </header>
 
+    <div id="stars"></div>
+    
     <main>
         <section class="container_inicio">
             <div class="conteudo_inicio">
                 <h1 id="titulo_inicio"></h1>
 
                 <div class="paragrafo_inicio" data-animar="e" style="transition-delay: 0.2s;">
-                    <p>
-                        Sou um jovem de 20 anos, nascido e criado em uma cidade pequena no sul da Bahia.
-                        A simplicidade e a criatividade sempre foram fundamentais na minha formação.
-                    </p>
-                    <p>
-                        Desde o primeiro contato com a tecnologia, fiquei fascinado pela sua capacidade
-                        de transformar vidas e resolver problemas.
-                    </p>
-                    <p>
-                        Hoje, dedico-me a aprender e aprimorar minhas habilidades no desenvolvimento de soluções
-                        práticas e criativas, sempre em busca de inovação.
-                    </p>
-                    <p>
-                        Com uma mente curiosa e paixão por tecnologia, estou determinado a contribuir para
-                        um mundo mais inteligente, impactando positivamente a sociedade.
-                    </p>
+                    <p>Programador front-end, futuro fullstack.</p>
                 </div>
 
                 <div class="botao_inicio">
-                    <a href="https://wa.me/5511988806169" target="_blank" data-animar="b"
-                        style="transition-delay: 0.3s;">Entre em contato</a>
+                    <a href="#contato" data-animar="b" style="transition-delay: 0.3s;">Entre em contato</a>
                 </div>
 
                 <article class="redes_social">
@@ -96,17 +82,42 @@
 
         <section class="sobre_mim" id="sobre">
             <article class="educacao_1" data-animar="d" style="transition-delay: 0.2s;">
-                <h3>Sobre mim</h3>
-                <p>
-                    Nos meus momentos livres, gosto de estar com minha família, pois acredito que são eles minha base e
-                    minha motivação diária. Tenho uma mente inquieta, sempre em busca de novos aprendizados, seja no
-                    universo da programação ou em qualquer outro campo que possa agregar algo à minha jornada. Encaro os
-                    desafios como oportunidades de crescimento e me dedico intensamente a tudo que me proponho a fazer.
-                    Sei que nem sempre os resultados vêm como esperamos, mas levo cada experiência como um passo
-                    importante no meu desenvolvimento. Minha meta é me tornar um grande programador e contribuir com
-                    soluções que realmente façam a diferença. Caminho com determinação, humildade e a certeza de que
-                    cada esforço me aproxima ainda mais do meu objetivo.
+                <h3 data-animar="c">Sobre mim</h3>
+                <p data-animar="e" style="transition-delay: 0.2s;">
+                    Me chamo Janpierry Santana, desenvolvedor web, estudante de Análise e Desenvolvimento de Sistemas e
+                    fundador de uma agência focada em presença digital estratégica a <a
+                        href="https://www.codelend.com.br" target="_blank">CodeLend.</a>
                 </p>
+
+                <p data-animar="e" style="transition-delay: 0.2s;">
+                    Minha trajetória começou no interior da Bahia, marcada por desafios familiares, perdas e superações
+                    que moldaram quem sou hoje. Ainda criança, perdi minha mãe de forma trágica e cresci enfrentando a
+                    dor, a rejeição e a solidão. Fui desacreditado por muitos, mas nunca deixei de acreditar que eu
+                    podia vencer.
+                </p>
+
+                <p data-animar="e" style="transition-delay: 0.2s;">
+                    Aos 18 anos, me mudei sozinho para São Paulo com o objetivo de mudar minha vida. Passei por
+                    situações extremas, como humilhações e ameaças. Mesmo assim, continuei firme — e foi na tecnologia
+                    que encontrei meu caminho.
+                </p>
+
+                <p data-animar="e" style="transition-delay: 0.2s;">
+                    Hoje, sou pai e marido, quando entrego um projeto carrega um pedaço da minha verdade, porque sei o
+                    valor de uma oportunidade e o quanto um bom
+                    trabalho pode transformar vidas.
+                </p>
+
+                <p data-animar="e" style="transition-delay: 0.2s;">
+                    Se você tem um sonho, um projeto ou um negócio e precisa de presença digital com qualidade,
+                    estratégia e impacto — estou aqui pra te ajudar.
+                </p>
+
+                <p data-animar="e" style="transition-delay: 0.2s;">
+                    Porque eu sei o que é começar do zero. E é exatamente por isso que faço questão de entregar o meu
+                    melhor.
+                </p>
+
             </article>
 
             <article class="educacao_2">
@@ -193,6 +204,13 @@
                     <div class="progresso figma" data-porcentagem="45%"></div>
                 </div>
             </div>
+
+            <div class="skill">
+                <span>IA 85%</span>
+                <div class="barra">
+                    <div class="progresso ia" data-porcentagem="85%"></div>
+                </div>
+            </div>
         </section>
 
         <section class="projetos" id="projetos">
@@ -225,56 +243,96 @@
                 </article>
             </article>
         </section>
+
+        <section class="contatos_">
+            <div class="box__contato">
+                <div class="fale_comigo">
+                    <a href="https://www.facebook.com/janpierry.sousa" target="_blank">
+                        <img src="img/facebook.png" alt="facebook">
+                    </a>
+                </div>
+
+                <div class="fale_comigo">
+                    <a href="https://www.tiktok.com/@janpyweb" target="_blank">
+                        <img src="img/tik-tok.png" alt="tiktok">
+                    </a>
+                </div>
+
+                <div class="fale_comigo">
+                    <a href="https://www.instagram.com/janpyweb/" target="_blank">
+                        <img src="img/instagram.png" alt="instagram">
+                    </a>
+                </div>
+
+                <div class="fale_comigo">
+                    <a href="https://wa.me/5511988806169" target="_blank">
+                        <img src="img/whatsapp.png" alt="whatsapp">
+                    </a>
+                </div>
+            </div>
+
+            <form class="formulario_contato" action="https://formsubmit.co/seu-email@email.com" method="POST"
+                id="form-contato">
+                <h2>Entre em contato</h2>
+                <input type="text" name="name" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="message" placeholder="Sua mensagem"></textarea>
+                <input type="hidden" name="_captcha" value="false">
+                <button type="submit">Enviar</button>
+                <p class="mensagem-sucesso" id="msg-sucesso">Mensagem enviada com sucesso! Em breve entro em contato.
+                </p>
+            </form>
+
+        </section>
     </main>
 
-    <div class="contatos_">
-        <div class="box__contato">
-            <div class="fale_comigo">
-                <a href="https://www.facebook.com/janpierry.sousa" target="_blank">
-                    <img src="img/facebook.png" alt="facebook">
-                </a>
-            </div>
-
-            <div class="fale_comigo">
-                <a href="https://www.tiktok.com/@janpyweb" target="_blank">
-                    <img src="img/tik-tok.png" alt="tiktok">
-                </a>
-            </div>
-
-            <div class="fale_comigo">
-                <a href="https://www.instagram.com/janpyweb/" target="_blank">
-                    <img src="img/instagram.png" alt="instagram">
-                </a>
-            </div>
-
-            <div class="fale_comigo">
-                <a href="https://wa.me/5511988806169" target="_blank">
-                    <img src="img/whatsapp.png" alt="whatsapp">
-                </a>
-            </div>
-        </div>
-
-        <form class="formulario_contato" action="https://formsubmit.co/seu-email@email.com" method="POST"
-            id="form-contato">
-            <h2>Entre em contato</h2>
-            <input type="text" name="name" placeholder="Seu nome" required>
-            <input type="email" name="email" placeholder="Seu e-mail" required>
-            <textarea name="message" placeholder="Sua mensagem"></textarea>
-            <input type="hidden" name="_captcha" value="false">
-            <button type="submit">Enviar</button>
-            <p class="mensagem-sucesso" id="msg-sucesso">Mensagem enviada com sucesso! Em breve entro em contato.</p>
-        </form>
-
-    </div>
-
-
-    </div>
 
     <footer id="contato">
         &copy; @janpyweb. Todos os direitos reservados.
     </footer>
 
     <script src="script/script.js"></script>
+    <!--PARTICUKLAS-->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("stars", {
+            "particles": {
+                "number": {
+                    "value": 200
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 1
+                },
+                "size": {
+                    "value": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 0.5,
+                    "direction": "none",
+                    "out_mode": "out"
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": false
+                    },
+                    "onclick": {
+                        "enable": false
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 </body>
 
 </html>
