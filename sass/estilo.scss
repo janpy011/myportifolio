@@ -28,6 +28,7 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
+    animation: surgir 3s ease-in 1;
 }
 
 .inicio {
@@ -129,7 +130,8 @@ main {
             font-size: 16px;
             text-align: justify;
             background-color: $pretoClaro;
-            padding: 1px;
+            width: fit-content;
+            padding: 5px;
             border-radius: 5px;
         }
 
@@ -698,4 +700,13 @@ footer {
 [data-animar].ativo {
     opacity: 1;
     transform: translate(0);
+}
+
+@keyframes surgir{ 
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
