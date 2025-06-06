@@ -111,3 +111,37 @@ const observerNumeros = new IntersectionObserver(entries => {
 });
 
 numeros.forEach(num => observerNumeros.observe(num));
+
+//ANIMAÇAO FOOTER
+const frase = document.getElementById("frase-animada");
+const textoOriginal = frase.textContent.trim();
+frase.textContent = ""; // Limpa antes da animação
+
+const observerFrase = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            [...textoOriginal].forEach((letra, i) => {
+                const span = document.createElement("span");
+                span.classList.add("letra");
+
+                // Se for espaço, adiciona um espaço fixo
+                if (letra === " ") {
+                    span.innerHTML = "&nbsp;";
+                } else {
+                    span.textContent = letra;
+                }
+
+                span.style.animationDelay = `${i * 0.05}s`;
+                frase.appendChild(span);
+            });
+
+            observerFrase.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.6
+});
+
+if (frase) {
+    observerFrase.observe(frase);
+}
