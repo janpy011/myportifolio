@@ -28,11 +28,11 @@ function digitar() {
     } else {
         if (!apagando) {
             apagando = true;
-            setTimeout(digitar, 1200); 
+            setTimeout(digitar, 1200);
         } else {
             apagando = false;
             indexTexto = (indexTexto + 1) % textos.length;
-            setTimeout(digitar, 300); 
+            setTimeout(digitar, 300);
         }
     }
 }
@@ -78,3 +78,36 @@ const animarOnScroll = () => {
 
 window.addEventListener('scroll', animarOnScroll);
 window.addEventListener('load', animarOnScroll);
+
+// ANIMAÇÃO DOS NÚMEROS (EXPERIÊNCIA E PROJETOS) AO SCROLL
+const numeros = document.querySelectorAll(".numero");
+
+const animarNumeros = (el) => {
+    const alvo = +el.dataset.alvo;
+    let atual = 0;
+    const duracao = 2000;
+    const passo = Math.max(1, Math.ceil(alvo / (duracao / 100)));
+
+    const contador = setInterval(() => {
+        atual += passo;
+        if (atual >= alvo) {
+            atual = alvo;
+            clearInterval(contador);
+        }
+        el.textContent = atual;
+    }, 100);
+};
+
+const observerNumeros = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const elemento = entry.target;
+            animarNumeros(elemento);
+            observerNumeros.unobserve(elemento);
+        }
+    });
+}, {
+    threshold: 0.6
+});
+
+numeros.forEach(num => observerNumeros.observe(num));

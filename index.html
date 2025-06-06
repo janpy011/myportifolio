@@ -13,11 +13,8 @@
 <body>
     <header class="inicio" data-animar="b">
         <div class="menu_inicio">
-            <div class="curriculo">
-                <a href="Curriculo_Janpierry_Santana_Com_Portfolio (1).pdf" class="botao-download" data-animar="b"
-                    style="transition-delay: 0.8s;" download>
-                    <img src="img/simbolo-de-download.png" width="30px" alt="baixar cv"> Baixar CV
-                </a>
+            <div class="logo">
+                Janpierry <span>Santana</span>
             </div>
 
             <div class="hamburger" id="hamburger">
@@ -28,6 +25,12 @@
 
             <nav class="menu_nav" id="menu_nav">
                 <ul>
+                    <li class="curriculo">
+                        <a href="Curriculo_Janpierry_Santana_Com_Portfolio (1).pdf" class="botao-download"
+                            data-animar="b" style="transition-delay: 0.8s;" download>
+                            Baixar CV
+                        </a>
+                    </li>
                     <li><a href="#sobre" data-animar="b" style="transition-delay: 0.2s;">Sobre mim</a></li>
                     <li><a href="#projetos" data-animar="b" style="transition-delay: 0.4s;">Projetos</a></li>
                     <li><a href="#contato" data-animar="b" style="transition-delay: 0.6s;">Contato</a></li>
@@ -44,7 +47,7 @@
                 <h1 id="titulo_inicio"></h1>
 
                 <div class="paragrafo_inicio" data-animar="e" style="transition-delay: 0.2s;">
-                    <p>Programador front-end e futuro fullstack.</p>
+                    <p>Programador <span>Front-end</span> e futuro <span>Fullstack</span>.</p>
                 </div>
 
                 <div class="botao_inicio">
@@ -65,7 +68,7 @@
                                 alt="tik-tok" /></a>
                     </div>
                     <div class="social" data-animar="c" style="transition-delay: 0.6s;">
-                        <a href="https://github.com/janpy011" target="_blank"><img src="img/github.png"
+                        <a href="https://github.com/janpy011" target="_blank"><img src="img/github-skills.png"
                                 alt="github" /></a>
                     </div>
                     <div class="social" data-animar="c" style="transition-delay: 0.8s;">
@@ -77,6 +80,7 @@
 
             <div class="imagem_inicio" data-animar="d" style="transition-delay: 0.8s;">
                 <img src="img/minha-foto.jpg" alt="uma foto minha" />
+                <div class="saudacao">👋​</div>
             </div>
         </section>
 
@@ -118,25 +122,31 @@
             </article>
 
             <article class="educacao_2">
-                <article class="educacao_ensino" data-animar="b" style="transition-delay: 0.5s;">
-                    <p>Educação</p>
+                <article class="educacao_box" data-animar="b" style="transition-delay: 0.5s;">
+                    <h3>Educação</h3>
                     <ul>
                         <li>• Ensino médio completo</li>
                         <li>• Análise e Desenvolvimento de Sistemas (Cursando - Faculdade VINCINT).</li>
                     </ul>
                 </article>
 
-                <article class="educacao_cursos" data-animar="b" style="transition-delay: 0.6s;">
-                    <p>Cursos & Certificados</p>
+                <article class="educacao_box" data-animar="b" style="transition-delay: 0.6s;">
+                    <h3>Certificados</h3>
+                    <ul>
+                        <li>• Certificado em Frontend Developer: HTML, CSS, JavaScript (Serliv - 112 horas).</li>
+                        <li>• Certificado em Programador Web (IF - 200 horas).</li>
+                        <li>• Certificado em Prompt Responsáveis (Open Academy - 8 horas).</li>
+                    </ul>
+                </article>
+
+                <article class="educacao_box" data-animar="b" style="transition-delay: 0.6s;">
+                    <h3>Estudando</h3>
                     <ul>
                         <li>• Cursando Figma (Udemy)</li>
                         <li>• Cursando React (Udemy)</li>
                         <li>• Cursando TypeScript (Udemy)</li>
                         <li>• Cursando Node.js (Udemy)</li>
                         <li>• Cursando SQL (Udemy)</li>
-                        <li>• Certificado em Frontend Developer: HTML, CSS, JavaScript (Serliv - 112 horas).</li>
-                        <li>• Certificado em Programador Web (IF - 200 horas).</li>
-                        <li>• Certificado em Prompt Responsáveis (Open Academy - 8 horas).</li>
                     </ul>
                 </article>
             </article>
@@ -264,6 +274,17 @@
             </article>
         </section>
 
+        <section class="metricas">
+            <div class="metrica">
+                <span class="numero" data-alvo="1" data-animar="b">0</span><span class="mais">+</span>
+                <p>Anos de experiência</p>
+            </div>
+            <div class="metrica">
+                <span class="numero" data-alvo="15" data-animar="b">0</span><span class="mais">+</span>
+                <p>Projetos finalizados</p>
+            </div>
+        </section>
+
         <section class="contatos_">
             <div class="box__contato">
                 <div class="fale_comigo">
@@ -291,7 +312,7 @@
                 </div>
             </div>
 
-            <form class="formulario_contato" action="https://formsubmit.co/seu-email@email.com" method="POST"
+            <form class="formulario_contato" action="https://formsubmit.co/janpierry2024@gmail.com" method="POST"
                 id="form-contato">
                 <h2>Entre em contato</h2>
                 <input type="text" name="name" placeholder="Seu nome" required>
