@@ -44,7 +44,10 @@
     <main>
         <section class="container_inicio">
             <div class="conteudo_inicio">
-                <h1 id="titulo_inicio"></h1>
+
+                <div class="caixa_h1">
+                    <h1 id="titulo_inicio"></h1>
+                </div>
 
                 <div class="paragrafo_inicio" data-animar="e" style="transition-delay: 0.2s;">
                     <p>Programador <span>Front-end</span> e futuro <span>Fullstack</span>.</p>
@@ -173,70 +176,112 @@
             <h2 data-animar="b">Minhas Tecnologias</h2>
 
             <div class="skill" data-animar="e" style="transition-delay: 0.2s;">
-                <span>HTML 95%</span>
+
+                <div class="porcentagem">
+                    <span>HTML</span>
+                    <div class="gambiarra"><span class="numero" data-alvo="95" data-animar="b">0</span> <span>%</span>
+                    </div>
+                </div>
+
                 <div class="barra">
                     <div class="progresso html" data-porcentagem="95%"></div>
                 </div>
             </div>
 
             <div class="skill" data-animar="e" style="transition-delay: 0.4s;">
-                <span>CSS 90%</span>
+                <div class="porcentagem">
+                    <span>CSS</span>
+                    <div class="gambiarra"><span class="numero" data-alvo="90" data-animar="b">0</span> <span>%</span>
+                    </div>
+                </div>
                 <div class="barra">
                     <div class="progresso css" data-porcentagem="90%"></div>
                 </div>
             </div>
 
             <div class="skill" data-animar="e">
-                <span>JavaScript 65%</span>
+                <div class="porcentagem">
+                    <span>JAVASCRIPT</span>
+                    <div class="gambiarra"><span class="numero" data-alvo="65" data-animar="b">0</span> <span>%</span>
+                    </div>
+                </div>
                 <div class="barra">
                     <div class="progresso javascript" data-porcentagem="65%"></div>
                 </div>
             </div>
 
             <div class="skill" data-animar="e">
-                <span>SASS 80%</span>
+                <div class="porcentagem">
+                    <span>SASS</span>
+                    <div class="gambiarra"><span class="numero" data-alvo="80" data-animar="b">0</span> <span>%</span>
+                    </div>
+                </div>
                 <div class="barra">
                     <div class="progresso sass" data-porcentagem="80%"></div>
                 </div>
             </div>
 
             <div class="skill" data-animar="e">
-                <span>Bootstrap 85%</span>
+                <div class="porcentagem">
+                    <span>BOOTSTRAP</span>
+                    <div class="gambiarra"><span class="numero" data-alvo="85" data-animar="b">0</span> <span>%</span>
+                    </div>
+                </div>
                 <div class="barra">
                     <div class="progresso bootstrap" data-porcentagem="85%"></div>
                 </div>
             </div>
 
             <div class="skill" data-animar="e">
-                <span>tailwind 55%</span>
+                <div class="porcentagem">
+                    <span>TAILWIND CSS</span>
+                    <div class="gambiarra"><span class="numero" data-alvo="55" data-animar="b">0</span> <span>%</span>
+                    </div>
+                </div>
                 <div class="barra">
                     <div class="progresso tailwind" data-porcentagem="55%"></div>
                 </div>
             </div>
 
             <div class="skill" data-animar="e">
-                <span>uiverse 95%</span>
+                <div class="porcentagem">
+                    <span>UIVERSE</span>
+                    <div class="gambiarra"><span class="numero" data-alvo="95" data-animar="b">0</span> <span>%</span>
+                    </div>
+                </div>
                 <div class="barra">
                     <div class="progresso uiverse" data-porcentagem="95%"></div>
                 </div>
             </div>
 
             <div class="skill">
-                <span>Figma 45%</span>
+                <div class="porcentagem">
+                    <span>FIGMA</span>
+                    <div class="gambiarra"><span class="numero" data-alvo="45" data-animar="b">0</span> <span>%</span>
+                    </div>
+                </div>
                 <div class="barra">
                     <div class="progresso figma" data-porcentagem="45%"></div>
                 </div>
             </div>
 
             <div class="skill">
-                <span>Git 75%</span>
+                <div class="porcentagem">
+                    <span>GIT</span>
+                    <div class="gambiarra"><span class="numero" data-alvo="75" data-animar="b">0</span> <span>%</span>
+                    </div>
+                </div>
                 <div class="barra">
                     <div class="progresso git" data-porcentagem="75%"></div>
                 </div>
             </div>
 
             <div class="skill">
-                <span>IA 85%</span>
+                <div class="porcentagem">
+                    <span>IA</span>
+                    <div class="gambiarra"><span class="numero" data-alvo="85" data-animar="b">0</span> <span>%</span>
+                    </div>
+                </div>
                 <div class="barra">
                     <div class="progresso ia" data-porcentagem="85%"></div>
                 </div>
@@ -244,32 +289,56 @@
         </section>
 
         <section class="projetos" id="projetos">
-            <div class="projeto_titulo">Meus projetos</div>
+            <h2 class="projeto_titulo" data-animar="b">Meus projetos</h2>
 
             <article class="container_projetos">
 
-                <article class="_projeto" data-animar="b">
-                    <a href="https://janpy011.github.io/jogos/" target="_blank"><img class="games" src="img/jogos.PNG"
-                            alt="jogos"></a>
+                <article class="_projeto" data-animar="c">
+                    <a href="https://janpy011.github.io/jogos/" target="_blank"><img src="img/jogos.PNG"
+                            alt="Jogos"></a>
                     <small>Jogos</small>
+                    <p>jogos que desenvolvi usando apenas HTML, CSS, JavaScript e IA.</p>
+                    <div class="projeto_botoes">
+                        <a href="https://janpy011.github.io/jogos/" target="_blank" class="botao_projeto live">Live
+                            Project</a>
+                        <a href="https://github.com/janpy011/jogos" target="_blank" class="botao_projeto github">GitHub</a>
+                    </div>
                 </article>
 
-                <article class="_projeto" data-animar="b">
+                <article class="_projeto" data-animar="c" style="transition-delay: 0.2s;">
                     <a href="https://barbeariaestilo.vercel.app/" target="_blank"><img src="img/barbearia.PNG"
                             alt="projeto barbearia"></a>
                     <small>Barbearia</small>
+                    <p>Landing page feita com HTML, CSS e JavaScript.</p>
+                    <div class="projeto_botoes">
+                        <a href="https://barbeariaestilo.vercel.app/" target="_blank" class="botao_projeto live">Live
+                            Project</a>
+                        <a href="https://github.com/janpy011/Barbearia" target="_blank" class="botao_projeto github">GitHub</a>
+                    </div>
                 </article>
 
-                <article class="_projeto" data-animar="b" style="transition-delay: 0.2s;">
-                    <a href="https://fannytatto.vercel.app/" target="_blank" id="tattoo"><img src="img/tattoo.PNG"
+                <article class="_projeto" data-animar="c" style="transition-delay: 0.4s;">
+                    <a href="https://fannytatto.vercel.app/" target="_blank"><img src="img/tattoo.PNG"
                             alt="projeto estúdio tattoo"></a>
                     <small>Estúdio Tattoo</small>
+                    <p>Landing page animada com carrossel feita com HTML, CSS, Javascript.</p>
+                    <div class="projeto_botoes">
+                        <a href="https://fannytatto.vercel.app/" target="_blank" class="botao_projeto live">Live
+                            Project</a>
+                        <a href="https://github.com/janpy011/studioTattoo" target="_blank" class="botao_projeto github">GitHub</a>
+                    </div>
                 </article>
 
-                <article class="_projeto" data-animar="b">
+                <article class="_projeto" data-animar="c" style="transition-delay: 0.6s;">
                     <a href="https://julianasouza.vercel.app/" target="_blank"><img src="img/salao.PNG"
                             alt="projeto Salão"></a>
                     <small>Salão</small>
+                    <p>Landing page feita com HTML, SASS e JavaScript, animações suaves e responsiva.</p>
+                    <div class="projeto_botoes">
+                        <a href="https://julianasouza.vercel.app/" target="_blank" class="botao_projeto live">Live
+                            Project</a>
+                        <a href="https://github.com/janpy011/salao" target="_blank" class="botao_projeto github">GitHub</a>
+                    </div>
                 </article>
             </article>
         </section>

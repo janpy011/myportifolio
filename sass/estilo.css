@@ -31,6 +31,8 @@ body {
   align-items: center;
   padding: 0.7em;
   background-color: #0f0f0f;
+  width: 100%;
+  position: relative;
 }
 .inicio .menu_inicio .logo {
   font-size: 25px;
@@ -48,6 +50,7 @@ body {
   font-weight: 700;
   font-size: 19px;
   text-align: center;
+  padding: 8px 12px;
 }
 .inicio .menu_inicio .menu_nav ul {
   display: flex;
@@ -99,6 +102,9 @@ main .container_inicio .conteudo_inicio {
   gap: 1.5em;
   flex: 1;
   max-width: 600px;
+}
+main .container_inicio .conteudo_inicio .caixa_h1 {
+  height: 60px;
 }
 main .container_inicio .conteudo_inicio #titulo_inicio {
   font-size: 40px;
@@ -183,6 +189,7 @@ main .container_inicio .imagem_inicio {
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 main .container_inicio .imagem_inicio img {
   border-radius: 50%;
@@ -237,12 +244,11 @@ main .sobre_mim h3::after {
   background-color: #4dc8ff;
 }
 main .sobre_mim a {
-  color: #000;
-  background-color: #fff;
+  color: #fff;
   font-weight: 700;
   border-radius: 5px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 18px;
 }
 main .sobre_mim a:hover {
   text-decoration: underline;
@@ -318,6 +324,15 @@ main .habilidades h2 {
 main .habilidades .skill {
   margin-bottom: 1em;
 }
+main .habilidades .skill .porcentagem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+main .habilidades .skill .porcentagem .gambiarra {
+  display: flex;
+  gap: 0.2em;
+}
 main .habilidades .skill span {
   color: #fff;
   font-weight: bold;
@@ -373,47 +388,80 @@ main .projetos {
   background-color: transparent;
   border-radius: 5px;
   margin: 50px auto;
-  overflow: auto;
   z-index: 20;
-  width: 70%;
-  height: 300px;
+  width: 100%;
+  max-width: 800px;
+  padding: 2em;
+  text-align: center;
 }
 main .projetos .projeto_titulo {
   color: #fff;
   font-weight: 700;
   padding: 10px;
+  font-size: 44px;
+  margin-bottom: 1.5em;
 }
 main .projetos .container_projetos {
   display: flex;
-  gap: 1em;
+  flex-direction: column;
+  gap: 2em;
   z-index: 1;
 }
 main .projetos .container_projetos ._projeto {
-  text-align: center;
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  align-items: center;
+  gap: 1em;
 }
 main .projetos .container_projetos ._projeto img {
-  width: 250px;
+  width: 100%;
+  max-width: 350px;
   padding: 10px;
   border-radius: 10px;
+  animation: flutuar 3s ease-in-out infinite;
 }
 main .projetos .container_projetos ._projeto img:hover {
   filter: drop-shadow(0px 0px 10px #fff);
   transition: 0.3s ease-in-out;
 }
-main .projetos .container_projetos ._projeto .games {
-  width: 150px;
-  padding: 15px;
-  border-radius: 0;
-  margin-top: -30px;
-}
 main .projetos .container_projetos ._projeto small {
   color: #fff;
-  padding: 10px;
   font-size: 20px;
   font-weight: 700;
+  padding: 5px;
+}
+main .projetos .container_projetos ._projeto p {
+  font-size: 16px;
+  text-align: justify;
+  background-color: #0f0f0f;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 600px;
+  width: 100%;
+}
+main .projetos .container_projetos ._projeto .projeto_botoes {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+main .projetos .container_projetos ._projeto .projeto_botoes .botao_projeto {
+  text-decoration: none;
+  background-color: #0f0f0f;
+  padding: 10px 15px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+main .projetos .container_projetos ._projeto .projeto_botoes .botao_projeto.live:hover {
+  background-color: #4dc8ff;
+  color: #000;
+}
+main .projetos .container_projetos ._projeto .projeto_botoes .botao_projeto.github:hover {
+  background-color: #fff;
+  color: #000;
 }
 main .metricas {
   display: flex;
@@ -557,7 +605,7 @@ footer .letra {
   opacity: 0;
   transform: translateY(-30px);
   animation: cair 0.6s forwards;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 10px;
 }
 @keyframes cair {
@@ -568,102 +616,281 @@ footer .letra {
 }
 
 @media (max-width: 768px) {
+  .inicio .menu_inicio {
+    flex-wrap: wrap;
+    padding: 0.5em;
+  }
+  .inicio .menu_inicio .logo {
+    font-size: clamp(20px, 5vw, 22px);
+    margin-left: 10px;
+  }
+  .inicio .menu_inicio .curriculo {
+    font-size: clamp(16px, 4vw, 18px);
+    padding: 6px 10px;
+  }
+  .inicio .menu_inicio .menu_nav ul {
+    gap: 0.8em;
+  }
+  .inicio .menu_inicio .menu_nav ul li {
+    padding: 6px;
+  }
+  .inicio .menu_inicio .menu_nav ul li a {
+    font-size: clamp(14px, 3.5vw, 16px);
+    padding: 8px;
+  }
   .container_inicio {
     flex-direction: column-reverse;
-    gap: 2em;
+    gap: 1.5em;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 30px;
   }
   .container_inicio .conteudo_inicio {
     align-items: center;
+    padding: 0 5px;
+    max-width: 100%;
   }
   .container_inicio .conteudo_inicio #titulo_inicio {
-    font-size: 32px;
+    font-size: clamp(24px, 7vw, 30px);
+    max-width: 100%;
+    width: 100%;
+    height: auto;
   }
   .container_inicio .conteudo_inicio .paragrafo_inicio {
-    width: 90%;
+    width: 95%;
+    max-width: 400px;
     text-align: center;
+    font-size: clamp(14px, 4vw, 15px);
+  }
+  .container_inicio .conteudo_inicio .paragrafo_inicio span {
+    font-size: clamp(15px, 4.5vw, 16px);
+  }
+  .container_inicio .conteudo_inicio .botao_inicio a {
+    padding: 6px 10px;
+    font-size: clamp(14px, 4vw, 16px);
+  }
+  .container_inicio .conteudo_inicio .redes_social {
+    gap: 1em;
+    margin-top: 20px;
+  }
+  .container_inicio .conteudo_inicio .redes_social .social {
+    width: clamp(40px, 10vw, 45px);
+    height: clamp(40px, 10vw, 45px);
   }
   .container_inicio .imagem_inicio {
+    max-width: clamp(150px, 60vw, 200px);
+    width: 100%;
+    margin-top: 30px;
+  }
+  .container_inicio .imagem_inicio img {
     max-width: 200px;
-    width: 65%;
-    margin-top: 50px;
   }
-  .tecnologias {
-    margin: 0 auto;
+  .container_inicio .imagem_inicio .saudacao {
+    font-size: clamp(18px, 5vw, 24px);
+    padding: 4px;
   }
-  .tecnologias .skills {
-    justify-content: center;
-    flex-wrap: wrap;
+  .sobre_mim {
+    margin-top: 60px;
+    padding: 0.8em;
+  }
+  .sobre_mim h3 {
+    font-size: clamp(24px, 6vw, 28px);
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+  }
+  .sobre_mim h3::after {
+    width: 50px;
+  }
+  .sobre_mim a {
+    font-size: clamp(13px, 3.5vw, 14px);
+  }
+  .sobre_mim article {
+    padding: 0.8em;
+    max-width: 100%;
+  }
+  .sobre_mim article p {
+    font-size: clamp(13px, 3.5vw, 14px);
+    padding: 8px;
+  }
+  .sobre_mim article li {
+    font-size: clamp(12px, 3vw, 13px);
+    padding: 8px;
+  }
+  .sobre_mim article img {
+    width: clamp(40px, 10vw, 45px);
+  }
+  .sobre_mim .educacao_1 {
+    max-width: 100%;
+  }
+  .sobre_mim .educacao_1 h3 {
+    padding: 8px;
+  }
+  .sobre_mim .educacao_2 {
     gap: 1em;
   }
-  .tecnologias .skills img {
-    max-width: 60px;
-    flex: 1 1 40px;
+  .sobre_mim .educacao_2 .educacao_box {
+    max-width: 100%;
+  }
+  .sobre_mim .tecnologias {
+    max-width: 100%;
+  }
+  .sobre_mim .tecnologias .skills {
+    gap: 0.6em;
+  }
+  .sobre_mim .tecnologias .skills img {
+    max-width: clamp(45px, 12vw, 55px);
+    flex: 1 1 clamp(40px, 10vw, 50px);
   }
   .habilidades {
-    padding: 1em;
+    padding: 0.8em;
+    max-width: 100%;
+  }
+  .habilidades h2 {
+    font-size: clamp(20px, 5.5vw, 24px);
+    margin-bottom: 1.2em;
+  }
+  .habilidades .skill .porcentagem {
+    font-size: clamp(14px, 4vw, 16px);
+  }
+  .habilidades .skill span {
+    font-size: clamp(12px, 3.5vw, 13px);
+  }
+  .habilidades .skill .barra {
+    height: 7px;
+  }
+  .projetos {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    height: auto;
+  }
+  .projetos .projeto_titulo {
+    font-size: clamp(18px, 5vw, 20px);
+    padding: 8px;
+  }
+  .projetos .container_projetos {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .projetos .container_projetos ._projeto {
+    min-width: clamp(160px, 40vw, 180px);
+  }
+  .projetos .container_projetos ._projeto img {
+    max-width: 160px;
+    padding: 8px;
+  }
+  .projetos .container_projetos ._projeto .games {
+    max-width: 100px;
+    padding: 10px;
+    margin-top: -20px;
+  }
+  .projetos .container_projetos ._projeto small {
+    font-size: clamp(16px, 4vw, 18px);
+    padding: 8px;
+  }
+  .metricas {
+    gap: 1em;
+    padding: 20px 8px;
+  }
+  .metricas .metrica {
+    font-size: clamp(18px, 5vw, 20px);
+    flex: 1 1 80px;
+  }
+  .metricas .metrica .numero {
+    font-size: clamp(32px, 8vw, 40px);
+  }
+  .metricas .metrica .mais {
+    font-size: clamp(24px, 6vw, 28px);
+  }
+  .metricas .metrica p {
+    font-size: clamp(14px, 4vw, 16px);
+    margin-top: 6px;
   }
   .contatos_ {
-    flex-direction: column;
-    justify-content: center;
+    padding: 1em 0.8em;
+    margin-top: 40px;
+  }
+  .contatos_ .box__contato {
+    gap: 0.8em;
+  }
+  .contatos_ .box__contato .fale_comigo img {
+    width: clamp(40px, 10vw, 45px);
+    padding: 4px;
+  }
+  .contatos_ .formulario_contato {
+    max-width: 95%;
+    padding: 1rem;
+  }
+  .contatos_ .formulario_contato h2 {
+    font-size: clamp(18px, 5vw, 20px);
+    margin-bottom: 0.8rem;
+  }
+  .contatos_ .formulario_contato input,
+  .contatos_ .formulario_contato textarea {
+    padding: 0.6rem;
+    font-size: clamp(13px, 3.5vw, 14px);
+  }
+  .contatos_ .formulario_contato button {
+    padding: 0.6rem;
+    font-size: clamp(13px, 3.5vw, 14px);
+  }
+  .mensagem-sucesso {
+    padding: 8px;
+    font-size: clamp(13px, 3.5vw, 14px);
+    margin-top: 0.8em;
   }
   .hamburger {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 25px;
-    height: 18px;
+    width: 22px;
+    height: 16px;
     cursor: pointer;
     z-index: 6001;
-    margin-right: 30px;
+    margin-right: 20px;
   }
   .hamburger span {
-    height: 3px;
+    height: 2px;
     width: 100%;
     background-color: #fff;
     border-radius: 2px;
     transition: 0.4s ease;
   }
   .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translateY(8px);
+    transform: rotate(45deg) translateY(7px);
   }
   .hamburger.active span:nth-child(2) {
     opacity: 0;
   }
   .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-8px);
-  }
-  .menu_inicio {
-    width: 100%;
+    transform: rotate(-45deg) translateY(-7px);
   }
   .menu_nav {
     display: none;
     width: 100%;
     position: absolute;
-    top: 0px;
-    left: 10px;
+    text-align: center;
+    top: 0;
+    left: 0;
     background-color: #000;
-    gap: 1em;
-    padding: 5px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    padding: 10px;
     z-index: 1000;
   }
   .menu_nav ul {
-    gap: 1em;
-    list-style: none;
+    flex-direction: column;
+    gap: 0.5em;
   }
   .menu_nav ul li a {
-    padding: 10px;
+    padding: 8px;
+    font-size: clamp(13px, 3.5vw, 14px);
     display: block;
     color: #fff;
     text-decoration: none;
   }
   .menu_nav ul li a:hover {
     color: #000;
-    border-radius: 5px;
-    text-shadow: 0px 0px 6px #fff;
+    border-radius: 4px;
+    text-shadow: 0px 0px 5px #fff;
     transition: 0.8s ease-in-out;
   }
   .menu_nav.active {
@@ -671,7 +898,135 @@ footer .letra {
     transition: 0.5s ease-in;
   }
 }
-/*ANIMAÇAO*/
+@media (max-width: 480px) {
+  .inicio .menu_inicio {
+    padding: 0.4em;
+  }
+  .inicio .menu_inicio .logo {
+    font-size: clamp(18px, 4.5vw, 20px);
+    margin-left: 8px;
+  }
+  .inicio .menu_inicio .curriculo {
+    font-size: clamp(13px, 3.5vw, 14px);
+    padding: 5px 8px;
+  }
+  .container_inicio {
+    margin-top: 20px;
+  }
+  .container_inicio .conteudo_inicio #titulo_inicio {
+    font-size: clamp(20px, 6vw, 26px);
+  }
+  .container_inicio .conteudo_inicio .paragrafo_inicio {
+    font-size: clamp(12px, 3.5vw, 13px);
+  }
+  .container_inicio .conteudo_inicio .paragrafo_inicio span {
+    font-size: clamp(13px, 4vw, 14px);
+  }
+  .container_inicio .conteudo_inicio .redes_social {
+    gap: 0.8em;
+  }
+  .container_inicio .conteudo_inicio .redes_social .social {
+    width: clamp(35px, 9vw, 40px);
+    height: clamp(35px, 9vw, 40px);
+  }
+  .container_inicio .imagem_inicio {
+    max-width: clamp(120px, 50vw, 160px);
+  }
+  .container_inicio .imagem_inicio img {
+    max-width: 160px;
+  }
+  .container_inicio .imagem_inicio .saudacao {
+    font-size: clamp(16px, 4.5vw, 20px);
+  }
+  .sobre_mim {
+    margin-top: 40px;
+  }
+  .sobre_mim h3 {
+    font-size: clamp(20px, 5.5vw, 24px);
+  }
+  .sobre_mim article {
+    padding: 0.6em;
+  }
+  .sobre_mim article p {
+    font-size: clamp(12px, 3vw, 13px);
+  }
+  .sobre_mim article li {
+    font-size: clamp(11px, 2.8vw, 12px);
+  }
+  .sobre_mim .tecnologias .skills img {
+    max-width: clamp(40px, 12vw, 50px);
+    flex: 1 1 clamp(35px, 10vw, 45px);
+  }
+  .habilidades {
+    padding: 0.6em;
+  }
+  .habilidades h2 {
+    font-size: clamp(18px, 5vw, 20px);
+  }
+  .habilidades .skill .porcentagem {
+    font-size: clamp(12px, 3.5vw, 14px);
+  }
+  .habilidades .skill span {
+    font-size: clamp(12px, 3vw, 13px);
+  }
+  .projetos {
+    margin: 30px auto;
+    padding: 6px;
+  }
+  .projetos .container_projetos ._projeto {
+    min-width: clamp(140px, 38vw, 160px);
+  }
+  .projetos .container_projetos ._projeto img {
+    max-width: 140px;
+  }
+  .projetos .container_projetos ._projeto small {
+    font-size: clamp(14px, 3.5vw, 16px);
+  }
+  .metricas {
+    gap: 0.8em;
+    padding: 15px 6px;
+  }
+  .metricas .metrica {
+    font-size: clamp(16px, 4.5vw, 18px);
+  }
+  .metricas .metrica .numero {
+    font-size: clamp(28px, 7vw, 32px);
+  }
+  .metricas .metrica .mais {
+    font-size: clamp(20px, 5.5vw, 24px);
+  }
+  .metricas .metrica p {
+    font-size: clamp(12px, 3.5vw, 14px);
+  }
+  .contatos_ {
+    padding: 0.8em 0.6em;
+  }
+  .contatos_ .box__contato .fale_comigo img {
+    width: clamp(35px, 9vw, 40px);
+  }
+  .contatos_ .formulario_contato {
+    padding: 0.8rem;
+  }
+  .contatos_ .formulario_contato h2 {
+    font-size: clamp(16px, 4.5vw, 18px);
+  }
+  .contatos_ .formulario_contato input,
+  .contatos_ .formulario_contato textarea {
+    padding: 0.5rem;
+    font-size: clamp(12px, 3vw, 13px);
+  }
+  .contatos_ .formulario_contato button {
+    padding: 0.5rem;
+    font-size: clamp(12px, 3vw, 13px);
+  }
+  footer {
+    padding: 6px;
+  }
+  footer .letra {
+    font-size: clamp(12px, 3.5vw, 14px);
+  }
+}
+/* ANIMAÇAO */
 [data-animar] {
   opacity: 0;
   transform: translateY(40px);

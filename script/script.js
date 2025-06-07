@@ -1,10 +1,18 @@
-// MENU HAMBÚRGUER
 const hamburger = document.getElementById('hamburger');
 const menuNav = document.getElementById('menu_nav');
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     menuNav.classList.toggle('active');
+});
+
+// Close menu when a link is clicked
+const menuLinks = menuNav.querySelectorAll('ul li a');
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        menuNav.classList.remove('active');
+    });
 });
 
 // ANIMAÇÃO DO TÍTULO (DIGITAÇÃO)
@@ -115,7 +123,7 @@ numeros.forEach(num => observerNumeros.observe(num));
 //ANIMAÇAO FOOTER
 const frase = document.getElementById("frase-animada");
 const textoOriginal = frase.textContent.trim();
-frase.textContent = ""; // Limpa antes da animação
+frase.textContent = "";
 
 const observerFrase = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -124,7 +132,6 @@ const observerFrase = new IntersectionObserver(entries => {
                 const span = document.createElement("span");
                 span.classList.add("letra");
 
-                // Se for espaço, adiciona um espaço fixo
                 if (letra === " ") {
                     span.innerHTML = "&nbsp;";
                 } else {
