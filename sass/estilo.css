@@ -618,11 +618,7 @@ footer {
   background-color: #000;
   margin-top: 30px;
 }
-footer .letra {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(-30px);
-  animation: cair 0.6s forwards;
+footer p {
   font-size: 18px;
   margin-bottom: 10px;
 }

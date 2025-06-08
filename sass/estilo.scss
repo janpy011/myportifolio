@@ -225,7 +225,7 @@ main {
 
         .imagem_inicio {
             flex: 1;
-            max-width:300px;
+            max-width: 300px;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -471,7 +471,7 @@ main {
         max-width: 800px;
         padding: 2em;
         text-align: center;
-        overflow-x: hidden; 
+        overflow-x: hidden;
 
         .projeto_titulo {
             color: $branco;
@@ -486,15 +486,15 @@ main {
             flex-direction: column;
             gap: 2em;
             z-index: 1;
-            flex-wrap: wrap; 
-            overflow-x: hidden; 
+            flex-wrap: wrap;
+            overflow-x: hidden;
 
             ._projeto {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 gap: 1em;
-                width: 100%; 
+                width: 100%;
                 min-width: unset;
                 background-color: $pretoClaro;
                 border-radius: 20px;
@@ -502,7 +502,7 @@ main {
 
                 img {
                     width: 100%;
-                    max-width: clamp(200px, 90vw, 350px); 
+                    max-width: clamp(200px, 90vw, 350px);
                     padding: 10px;
                     border-radius: 10px;
                     animation: flutuar 3s ease-in-out infinite;
@@ -526,7 +526,7 @@ main {
                     color: $branco;
                     padding: 10px;
                     border-radius: 5px;
-                    max-width: 90%; 
+                    max-width: 90%;
                     width: 100%;
                 }
 
@@ -715,15 +715,10 @@ footer {
     background-color: $preto;
     margin-top: 30px;
 
-    .letra {
-        display: inline-block;
-        opacity: 0;
-        transform: translateY(-30px);
-        animation: cair 0.6s forwards;
+    p{
         font-size: 18px;
         margin-bottom: 10px;
     }
-
     @keyframes cair {
         to {
             opacity: 1;
@@ -794,15 +789,15 @@ footer {
                 width: 100%;
                 position: absolute;
                 text-align: center;
-                top: calc(100%); 
+                top: calc(100%);
                 left: 0;
                 background-color: $preto;
                 padding: 10px;
-                z-index: 999; 
-                transform: translateY(-100%); 
+                z-index: 999;
+                transform: translateY(-100%);
                 transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
                 opacity: 0;
-                height: 100vh; 
+                height: 100vh;
 
                 ul {
                     flex-direction: column;
@@ -826,7 +821,7 @@ footer {
 
                 &.active {
                     display: flex;
-                    transform: translateY(0); 
+                    transform: translateY(0);
                     opacity: 1;
                 }
             }
@@ -878,12 +873,12 @@ footer {
             }
         }
 
-        .imagem_inicio { 
+        .imagem_inicio {
             width: 100%;
             max-width: none;
             margin-top: 30px;
 
-            img{
+            img {
                 width: 100%;
                 max-width: none;
             }
@@ -993,7 +988,7 @@ footer {
         }
 
         .container_projetos {
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             gap: 1.5em;
             overflow-y: hidden;
 
@@ -1013,7 +1008,7 @@ footer {
                 }
 
                 p {
-                    max-width: 90%; 
+                    max-width: 90%;
                     font-size: clamp(13px, 3.5vw, 14px);
                 }
 
