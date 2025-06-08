@@ -258,11 +258,7 @@ main .sobre_mim a {
   color: #fff;
   font-weight: 700;
   border-radius: 5px;
-  text-decoration: none;
   font-size: 18px;
-}
-main .sobre_mim a:hover {
-  text-decoration: underline;
 }
 main .sobre_mim article {
   background-color: #0f0f0f;
