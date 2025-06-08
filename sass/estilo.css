@@ -753,7 +753,6 @@ footer .letra {
     height: clamp(40px, 10vw, 45px);
   }
   .container_inicio .imagem_inicio {
-    max-width: 350px;
     width: 350px;
     margin-top: 30px;
   }
@@ -761,9 +760,9 @@ footer .letra {
     width: 100%;
   }
   .container_inicio .imagem_inicio .saudacao {
-    font-size: 20px;
+    font-size: 18px;
     padding: 4px;
-    right: 20px;
+    right: 30px;
   }
   .sobre_mim {
     margin-top: 60px;
