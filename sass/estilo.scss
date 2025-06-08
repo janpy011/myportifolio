@@ -877,7 +877,8 @@ footer {
         }
 
         .imagem_inicio { 
-            width: 350px;
+            width: 400px;
+            max-width: none;
             margin-top: 30px;
             img{
                 width: 100%;
@@ -885,7 +886,8 @@ footer {
             .saudacao {
                 font-size: 18px;
                 padding: 4px;
-                right: 30px;
+                right: 40px;
+                bottom: 0;
             }
         }
     }
