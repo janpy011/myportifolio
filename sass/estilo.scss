@@ -247,8 +247,8 @@ main {
                 height: fit-content;
                 font-size: 30px;
                 padding: 6px;
-                bottom: 5px;
-                right: 2px;
+                bottom: 0px;
+                right: 10px;
                 display: block;
                 z-index: 21;
 
@@ -877,12 +877,12 @@ footer {
         }
 
         .imagem_inicio {
-            max-width: 200px; 
+            max-width: 300px; 
             width: 100%;
             margin-top: 30px;
 
             .saudacao {
-                font-size: clamp(18px, 5vw, 24px);
+                font-size: 20px;
                 padding: 4px;
             }
         }

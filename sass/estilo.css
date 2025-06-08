@@ -219,8 +219,8 @@ main .container_inicio .imagem_inicio .saudacao {
   height: fit-content;
   font-size: 30px;
   padding: 6px;
-  bottom: 5px;
-  right: 2px;
+  bottom: 0px;
+  right: 10px;
   display: block;
   z-index: 21;
 }
@@ -753,12 +753,12 @@ footer .letra {
     height: clamp(40px, 10vw, 45px);
   }
   .container_inicio .imagem_inicio {
-    max-width: 200px;
+    max-width: 300px;
     width: 100%;
     margin-top: 30px;
   }
   .container_inicio .imagem_inicio .saudacao {
-    font-size: clamp(18px, 5vw, 24px);
+    font-size: 20px;
     padding: 4px;
   }
   .sobre_mim {
