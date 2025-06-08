@@ -6,7 +6,7 @@ hamburger.addEventListener('click', () => {
     menuNav.classList.toggle('active');
 });
 
-// Close menu when a link is clicked
+// FECHA MENU
 const menuLinks = menuNav.querySelectorAll('ul li a');
 menuLinks.forEach(link => {
     link.addEventListener('click', () => {

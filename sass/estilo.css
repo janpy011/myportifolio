@@ -217,10 +217,10 @@ main .container_inicio .imagem_inicio .saudacao {
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  font-size: 30px;
+  font-size: 20px;
   padding: 6px;
   bottom: 0px;
-  right: 10px;
+  right: 60px;
   display: block;
   z-index: 21;
 }
@@ -428,6 +428,9 @@ main .projetos .container_projetos ._projeto {
   gap: 1em;
   width: 100%;
   min-width: unset;
+  background-color: #0f0f0f;
+  border-radius: 20px;
+  padding: 1em;
 }
 main .projetos .container_projetos ._projeto img {
   width: 100%;
@@ -449,7 +452,6 @@ main .projetos .container_projetos ._projeto small {
 main .projetos .container_projetos ._projeto p {
   font-size: 16px;
   text-align: justify;
-  background-color: #0f0f0f;
   color: #fff;
   padding: 10px;
   border-radius: 5px;
@@ -463,10 +465,10 @@ main .projetos .container_projetos ._projeto .projeto_botoes {
 }
 main .projetos .container_projetos ._projeto .projeto_botoes .botao_projeto {
   text-decoration: none;
-  background-color: #0f0f0f;
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 10px 15px;
   font-weight: 700;
-  color: #fff;
+  color: #000;
   border-radius: 5px;
   font-size: 16px;
   transition: background-color 0.3s, color 0.3s;
@@ -753,18 +755,13 @@ footer .letra {
     height: clamp(40px, 10vw, 45px);
   }
   .container_inicio .imagem_inicio {
-    width: 400px;
+    width: 100%;
     max-width: none;
     margin-top: 30px;
   }
   .container_inicio .imagem_inicio img {
     width: 100%;
-  }
-  .container_inicio .imagem_inicio .saudacao {
-    font-size: 18px;
-    padding: 4px;
-    right: 40px;
-    bottom: 0;
+    max-width: none;
   }
   .sobre_mim {
     margin-top: 60px;
@@ -850,9 +847,6 @@ footer .letra {
     gap: 1.5em;
     overflow-y: hidden;
   }
-  .projetos .container_projetos .game {
-    width: 70%;
-  }
   .projetos .container_projetos ._projeto {
     min-width: unset;
     width: 100%;
@@ -861,11 +855,6 @@ footer .letra {
   .projetos .container_projetos ._projeto img {
     max-width: clamp(120px, 90vw, 140px);
     padding: 8px;
-  }
-  .projetos .container_projetos ._projeto img.games {
-    max-width: clamp(120px, 90vw, 140px);
-    padding: 8px;
-    margin-top: 0;
   }
   .projetos .container_projetos ._projeto small {
     font-size: clamp(16px, 4vw, 18px);
