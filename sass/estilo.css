@@ -301,6 +301,11 @@ main .sobre_mim ul {
 main .sobre_mim .tecnologias {
   width: 100%;
 }
+main .sobre_mim .tecnologias p {
+  font-size: 35px;
+  text-align: center;
+  padding: 5px;
+}
 main .sobre_mim .tecnologias .skills {
   display: flex;
   justify-content: center;
@@ -327,6 +332,8 @@ main .habilidades h2 {
   text-align: center;
   color: #fff;
   margin-bottom: 1.5em;
+  font-size: 35px;
+  padding: 15px;
 }
 main .habilidades .skill {
   margin-bottom: 1em;
@@ -552,7 +559,7 @@ main .contatos_ .formulario_contato {
   max-width: 400px;
   background-color: #000;
   padding: 2rem;
-  border: 2px solid #fff;
+  border: 2px solid #4dc8ff;
   border-radius: 10px;
 }
 main .contatos_ .formulario_contato h2 {
@@ -585,7 +592,7 @@ main .contatos_ .formulario_contato button {
   cursor: pointer;
 }
 main .contatos_ .formulario_contato button:hover {
-  background-color: #0f0f0f;
+  background-color: #4dc8ff;
   color: #fff;
   transition: 0.3s;
 }

@@ -344,6 +344,12 @@ main {
         .tecnologias {
             width: 100%;
 
+            p {
+                font-size: 35px;
+                text-align: center;
+                padding: 5px;
+            }
+
             .skills {
                 display: flex;
                 justify-content: center;
@@ -374,6 +380,8 @@ main {
             text-align: center;
             color: $branco;
             margin-bottom: 1.5em;
+            font-size: 35px;
+            padding: 15px;
         }
 
         .skill {
@@ -640,8 +648,9 @@ main {
             max-width: 400px;
             background-color: $preto;
             padding: 2rem;
-            border: 2px solid $branco;
+            border: 2px solid $ciano;
             border-radius: 10px;
+            
 
             h2 {
                 font-size: 1.5rem;
@@ -676,7 +685,7 @@ main {
                 cursor: pointer;
 
                 &:hover {
-                    background-color: $pretoClaro;
+                    background-color: $ciano;
                     color: $branco;
                     transition: .3s;
                 }
@@ -710,7 +719,7 @@ footer {
     background-color: $preto;
     margin-top: 30px;
 
-    p{
+    p {
         font-size: 18px;
         margin-bottom: 10px;
         animation: flutuar 3s ease-in-out infinite;
