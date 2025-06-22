@@ -196,7 +196,7 @@ main .container_inicio .conteudo_inicio .redes_social .social img:hover {
 }
 main .container_inicio .imagem_inicio {
   flex: 1;
-  max-width: 300px;
+  max-width: 320px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -204,7 +204,7 @@ main .container_inicio .imagem_inicio {
 }
 main .container_inicio .imagem_inicio img {
   border-radius: 50%;
-  width: 100%;
+  width: 90%;
   box-shadow: 0px 0px 10px #4dc8ff;
   display: block;
   animation: flutuar 3s ease-in-out infinite;
@@ -559,7 +559,7 @@ main .contatos_ .formulario_contato {
   max-width: 400px;
   background-color: #000;
   padding: 2rem;
-  border: 2px solid #4dc8ff;
+  border: 2px solid #fff;
   border-radius: 10px;
 }
 main .contatos_ .formulario_contato h2 {

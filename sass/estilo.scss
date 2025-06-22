@@ -224,7 +224,7 @@ main {
 
         .imagem_inicio {
             flex: 1;
-            max-width: 300px;
+            max-width: 320px;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -232,7 +232,7 @@ main {
 
             img {
                 border-radius: 50%;
-                width: 100%;
+                width: 90%;
                 box-shadow: 0px 0px 10px $ciano;
                 display: block;
                 animation: flutuar 3s ease-in-out infinite;
@@ -648,7 +648,7 @@ main {
             max-width: 400px;
             background-color: $preto;
             padding: 2rem;
-            border: 2px solid $ciano;
+            border: 2px solid $branco;
             border-radius: 10px;
             
 
